@@ -19,7 +19,7 @@ export async function insertUser(client, body){
 		"name": body.name,
 		"username":body.username,
 		"password":body.password,
-		"gitlab_user":body.gitlab_user
+		"github_user":body.github_user
 	}
 	let  userInfo = await client.db("hellobuild").collection("users").insertOne(params);
 	return body
